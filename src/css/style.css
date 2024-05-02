@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --cor-amarelo: #EEFE3E;
-    --cor-verde: #113D30;
+    --cor-preto: #111111;
+    --cor-branco: #f9f9f9;
+    --cor-vermelho: rgb(189, 32, 32);
 }
 
 * {
@@ -20,15 +21,8 @@ nav {
 }
 
 header nav div {
-    margin: 0 20px;
-}
-
-header nav div:nth-child(2) {
-    justify-content: center;
-}
-
-header nav div:nth-last-of-type(-n+2) {
-    margin-top: 25px;
+    margin: 30px 20px;
+    flex-wrap: nowrap;
 }
 
 .header-item {
@@ -39,6 +33,7 @@ header nav div:nth-last-of-type(-n+2) {
     font-weight: 700;
     font-style: normal;
     font-size: 20px;
+    margin-top: 30px;
 }
 
 #logo {
@@ -52,22 +47,27 @@ main {
     align-items: center; 
     justify-content: center;
     height: 100vh;
+    position: relative;
 }
 
 #product-title {
-    color: var(--cor-verde);
+    color: var(--cor-vermelho);
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 90px;
 }
 
+#product-image {
+    position: absolute;
+}
+
 button {
     padding: 15px;
-    border-radius: 25px;
+    border-radius: 5px;
     border: none;
-    background-color: var(--cor-verde);
-    color: var(--cor-amarelo);
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
