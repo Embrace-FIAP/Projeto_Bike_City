@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Definição do idioma da página como inglês -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/quiz.css">
-    <script src="../script/quiz.js" async></script>
-    <title>Velocity Ventures</title>
+    <meta charset="UTF-8"> <!-- Declaração do conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuração da viewport para dispositivos móveis -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Importação do arquivo CSS do Font Awesome -->
+    <link rel="shortcut icon" href="/src/assets/img/icons8-bike-90.png" type="image/x-icon"> <!-- Ícone da página -->
+    <link rel="stylesheet" href="../css/quiz.css"> <!-- Importação do arquivo CSS personalizado -->
+    <script src="../script/quiz.js" async></script> <!-- Importação do arquivo JavaScript -->
+    <title>Velocity Ventures</title> <!-- Título da página -->
 </head>
 <body>
 
     <header>
         <div class="container-header">
             <div class="flex">
-                <a href="#" id="header-brand">Velocity Ventures</a>
+                <a href="#" id="header-brand">Velocity Ventures</a> <!-- Link para a página inicial -->
                 <nav>
                     <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/src/pages/about.html">About us</a></li>
-                        <li><a href="/src/pages/quiz.html">Quiz</a></li>
+                        <li><a href="/index.html">Home</a></li> <!-- Link para a página inicial -->
+                        <li><a href="/src/pages/about.html">About us</a></li> <!-- Link para a página "Sobre nós" -->
+                        <li><a href="/src/pages/quiz.html">Quiz</a></li> <!-- Link para a página do quiz -->
                     </ul>
                 </nav>
 
                 <div class="header-icon">
-                    <a href="#" id="show-contacts"><i class="fa-solid fa-phone"></i></a>
-                    <a href="#" id="show-login"><i class="fa-solid fa-user"></i></a>
+                    <a href="#" id="show-contacts"><i class="fa-solid fa-phone"></i></a> <!-- Ícone para mostrar contatos -->
+                    <a href="#" id="show-login"><i class="fa-solid fa-user"></i></a> <!-- Ícone para mostrar login -->
                 </div>
             </div>
         </div>
@@ -33,17 +34,17 @@
     <main>
         <div class="container">
             <div class="question-container hide">
-                <span class="question">Question</span>
+                <span class="question">Question</span> <!-- Texto da pergunta -->
                 <div class="answers-container">
-                    <button class="answer button">Answer 1</button>
-                    <button class="answer button">Answer 2</button>
-                    <button class="answer button">Answer 3</button>
-                    <button class="answer button">Answer 4</button>
+                    <button class="answer button">Answer 1</button> <!-- Botão com a primeira opção de resposta -->
+                    <button class="answer button">Answer 2</button> <!-- Botão com a segunda opção de resposta -->
+                    <button class="answer button">Answer 3</button> <!-- Botão com a terceira opção de resposta -->
+                    <button class="answer button">Answer 4</button> <!-- Botão com a quarta opção de resposta -->
                 </div>
             </div>
             <div class="controls-container">
-                <button class="start-quiz button">Start Quiz</button>
-                <button class="next-question button hide">Next Question</button>
+                <button class="start-quiz button">Start Quiz</button> <!-- Botão para iniciar o quiz -->
+                <button class="next-question button hide">Next Question</button> <!-- Botão para ir para a próxima pergunta (oculto inicialmente) -->
             </div>
         </div>
     </main>

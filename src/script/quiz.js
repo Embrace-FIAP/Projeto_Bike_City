@@ -1,3 +1,4 @@
+// Seleção dos elementos DOM
 const $startGameButton = document.querySelector(".start-quiz");
 const $nextQuestionButton = document.querySelector(".next-question");
 const $questionsContainer = document.querySelector(".question-container");
@@ -5,18 +6,22 @@ const $questionText = document.querySelector(".question");
 const $answersContainer = document.querySelector(".answers-container");
 const $answers = document.querySelectorAll(".answer");
 
+// Variáveis de controle do jogo
 let currentQuestionIndex = 0;
 let totalCorrect = 0;
 
+// Adiciona listeners de evento aos botões
 $startGameButton.addEventListener("click", startGame);
 $nextQuestionButton.addEventListener("click", displayNextQuestion);
 
+// Função para iniciar o jogo
 function startGame() {
   $startGameButton.classList.add("hide");
   $questionsContainer.classList.remove("hide");
   displayNextQuestion();
 }
 
+// Função para exibir a próxima pergunta
 function displayNextQuestion() {
   resetState();
   
@@ -38,6 +43,7 @@ function displayNextQuestion() {
   });
 }
 
+// Função para redefinir o estado do jogo
 function resetState() {
   while($answersContainer.firstChild) {
     $answersContainer.removeChild($answersContainer.firstChild);
@@ -47,6 +53,7 @@ function resetState() {
   $nextQuestionButton.classList.add("hide");
 }
 
+// Função para selecionar uma resposta
 function selectAnswer(event) {
   const answerClicked = event.target;
 
@@ -71,6 +78,7 @@ function selectAnswer(event) {
   currentQuestionIndex++;
 }
 
+// Função para finalizar o jogo
 function finishGame() {
   const totalQuestions = questions.length;
   const performance = Math.floor(totalCorrect * 100 / totalQuestions);
@@ -106,6 +114,7 @@ function finishGame() {
   `;
 }
 
+// Array de objetos de perguntas e respostas
 const questions = [
     {
       question: "Who is the inventor of the bicycle?",

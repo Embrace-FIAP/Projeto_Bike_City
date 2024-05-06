@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 
+/* Definição das variáveis CSS globais */
 :root {
     --black-color: hsl(0, 0%, 12%);
     --body-color: hsl(0, 4%, 90%);
@@ -7,41 +8,45 @@
     --biggest-font-size: 3.7rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
-    --small-font-size: .813rem;
     --font-regular: 400;
     --font-semi-bold: 600;
-    --font-bold: 700;
 }
 
+/* Reset de estilos */
 * {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
 
+/* Estilos para o corpo da página */
 body {
     background-color: var(--body-color); 
     color: var(--body-color);
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-     
+    box-sizing: border-box;
 }
 
+/* Estilos para o contêiner do cabeçalho */
 .container-header {
     max-width: 1200px;
     margin: auto;
 }
 
+/* Estilos para elementos flexíveis */
 .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Estilos para o cabeçalho */
 header {
     padding: 30px 4%;
 }
 
+/* Estilos para o logotipo do cabeçalho */
 #header-brand {
     color: var(--black-color);
     font-weight: var(--font-semi-bold);
@@ -50,79 +55,94 @@ header {
     font-size: 20px;
 }
 
+/* Estilos para a lista não ordenada no cabeçalho */
 header ul {
     list-style-type: none;
 }
 
+/* Estilos para os itens da lista no cabeçalho */
 header ul li {
     display: inline-block;
     margin-right: 40px;
 }
 
+/* Estilos para os links dos itens da lista no cabeçalho */
 header ul li a {
     text-decoration: none;
     color: var(--black-color);
 }
 
+/* Estilos para ícones no cabeçalho */
 header i {
     color: var(--black-color);
     margin: 0 40px;
 }
 
+/* Estilos para o título */
 .title {
     font-size: 35px;
     margin: 0px 125px 18px 0px;
     color: var(--black-color);
 }
 
+/* Estilos para a seção "Our Story" */
 #ourStory {
     display: flex;
+    margin: 100px 60px 0px 60px;
 }
 
+/* Estilos para o conteúdo */
 .content {
     font-optical-sizing: auto;
-    font-weight: 700;
     font-style: normal;
     line-height: 1.8;
     font-size: 16px;
-    margin: 40px 120px 20px 0px;
+    margin: 60px 90px 40px 0px;
     color: var(--black-color);
 }
 
+/* Estilos para a imagem "Place" */
 #place {
     border-radius: 5px;
-    width: 820px;
+    width: 600px;
     height: 380px;
     margin-top: 65px;
 }
 
-#ourBlend {
+/* Estilos para a seção "Our Blend" */
+#ourBike {
     display: flex;
     align-items: center;
     margin-top: 200px;
+    margin: 150px 60px 50px 0px;
 }
 
-#blend {
+/* Estilos para a imagem "Blend" */
+#bike {
     border-radius: 5px;
     width: 820px;
     height: 415px;
     margin: 150px 100px 0px 40px;
 }
 
+/* Estilos para o segundo conteúdo */
 #secondContent {
     color: var(--black-color);
+    margin-top: 15px;
 }
 
+/* Estilos para o título do segundo conteúdo */
 #secondTitle {
     font-size: 35px;
 }
 
+/* Estilos para subtítulos */
 .subTitle {
     margin: 60px 0px 20px 0px;
-    font-size: 24px;
-
+    font-size: var(--h2-font-size);
 }
 
+/* Estilos para parágrafos */
 .paragraph {
     color: var(--black-color);
     font-size: 16px;

@@ -1,5 +1,7 @@
+/* Importando a fonte Montserrat do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 
+/* Definição das variáveis CSS globais */
 :root {
     --black-color: hsl(0, 0%, 12%);
     --body-color: hsl(0, 4%, 90%);
@@ -13,35 +15,40 @@
     --font-bold: 700;
 }
 
+/* Reset de estilos */
 * {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
 
+/* Estilos para o corpo da página */
 body {
     background-color: var(--body-color); 
     color: var(--body-color);
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-     
 }
 
+/* Estilos para o contêiner do cabeçalho */
 .container-header {
     max-width: 1200px;
     margin: auto;
 }
 
+/* Estilos para elementos flexíveis */
 .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Estilos para o cabeçalho */
 header {
     padding: 30px 4%;
 }
 
+/* Estilos para o logotipo do cabeçalho */
 #header-brand {
     color: var(--black-color);
     font-weight: var(--font-semi-bold);
@@ -50,25 +57,30 @@ header {
     font-size: 20px;
 }
 
+/* Estilos para a lista não ordenada no cabeçalho */
 header ul {
     list-style-type: none;
 }
 
+/* Estilos para os itens da lista no cabeçalho */
 header ul li {
     display: inline-block;
     margin-right: 40px;
 }
 
+/* Estilos para os links dos itens da lista no cabeçalho */
 header ul li a {
     text-decoration: none;
     color: var(--black-color);
 }
 
+/* Estilos para ícones no cabeçalho */
 header i {
     color: var(--black-color);
     margin: 0 40px;
 }
 
+/* Estilos para o conteúdo principal */
 main {
     height: 100vh; 
     justify-content: center;
@@ -76,10 +88,12 @@ main {
     display: flex;
 }
 
+/* Estilos para botões */
 button {
     cursor: pointer;
 }
 
+/* Estilos para o contêiner principal */
 .container {
     background-color: var(--black-color);
     width: 90%;
@@ -93,6 +107,7 @@ button {
     align-items: center;
 }
 
+/* Estilos para o contêiner de perguntas */
 .question-container {
     width: 100%;
     display: flex;
@@ -102,12 +117,14 @@ button {
     gap: 24px;
 }
 
+/* Estilos para as perguntas */
 .question {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
 }
 
+/* Estilos para o contêiner de respostas */
 .answers-container {
     width: 100%;
     display: grid;
@@ -115,10 +132,12 @@ button {
     gap: 16px;
 }
 
+/* Estilos para o botão de próxima pergunta */
 .next-question {
     margin-top: 32px;
 }
 
+/* Estilos para botões genéricos */
 .button {
     background-color: var(--body-color);
     color: var(--black-color);
@@ -129,22 +148,27 @@ button {
     transition: filter 0.2s;
 }
 
+/* Estilos para botões quando não estão desativados e são passados por cima */
 .button:not(:disabled):hover {
     filter: brightness(0.8);
 }
 
+/* Estilos para respostas desativadas */
 .answer:disabled {
     cursor: not-allowed;
 }
 
+/* Estilos para esconder elementos */
 .hide {
     display: none;
 }
 
+/* Estilos para respostas corretas */
 .correct {
     background-color: rgb(77, 218, 84);
 }
 
+/* Estilos para respostas incorretas */
 .incorrect {
     background-color: rgb(197, 21, 21);
 }
