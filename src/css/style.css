@@ -1,126 +1,309 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 
 :root {
-    --cor-preto: #111111;
-    --cor-branco: #f9f9f9;
-    --cor-vermelho: rgb(189, 32, 32);
+    --black-color: hsl(0, 0%, 12%);
+    --body-color: hsl(0, 4%, 90%);
+    --body-font: "Montserrat", sans-serif;
+    --biggest-font-size: 3.8rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--cor-amarelo);
+    background-color: var(--body-color); 
+    color: var(--black-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
 }
 
-nav {
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flex {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-header nav div {
-    margin: 30px 20px;
-    flex-wrap: nowrap;
+header {
+    padding: 30px 4%;
 }
 
-.header-item {
-    margin: 0 50px;
+#header-brand {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
     text-decoration: none;
-    color: var(--cor-verde);
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    margin-right: 50px;
     font-size: 20px;
-    margin-top: 30px;
 }
 
-#logo {
-    height: 80px;
-    width: 80px;
+header ul {
+    list-style-type: none;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    height: 100vh;
+header ul li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+header i {
+    color: var(--black-color);
+    margin: 0 40px;
+}
+
+.slider {
     position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
 }
 
-#slide-show {
-    position: relative;
+.slider img {
+    display: none;
+    float: right;
+    padding: 20px 80px 40px 0px;
 }
 
-#product-title {
-    color: var(--cor-vermelho);
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 350px;
-    z-index: 2;
+.slide {
+    filter: drop-shadow(0 20px 12px hsla(0, 0%, 0%, .4));
 }
 
-#product-image {
+img.displaySlide {
+    display: block;
+}
+
+.text--slides {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 21%;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 800px;
+    text-align: left;
+}
+
+.text--slides h1 {
+    display: none;
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    font-size: var(--biggest-font-size);
+    color: var(--black-color);
+    padding-bottom: 70px;
+}
+
+h1.displaySlide {
+    display: block;
+}
+
+.circle--slides div {
+    width: 600px;
     height: 600px;
-    padding-bottom: 100px;
+    border-radius: 50%;
 }
 
-button, #buy{
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--cor-preto);
-    color: var(--cor-branco);
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+.home__button {
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    text-decoration: none;
     font-size: 20px;
-    cursor: pointer;
 }
 
-button:hover {
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(104, 12, 12); 
-    color: var(--cor-branco);
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
-    cursor: pointer;
+.home__button i {
+    font-size: .1.25rem;
+    transition: transform .4s;
 }
 
-button:active {
-    padding: 15px;
-    border-radius: 5px;
+.home__button:hover i {
+    transform: translateX(.5rem);
+}
+
+.home__subtitle {
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    text-decoration: none;
+}
+
+.prev,
+.next {
+    position: absolute;
+    bottom: 10px;
+    padding: 4px 15px 4px 20px;
     border: none;
-    background-color: rgb(137, 19, 19); 
-    color: var(--cor-branco);
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 20px;
-    cursor: pointer;
+    border-radius: 2px;
+    font-size: var(--normal-font-size);
+    transition: transform .4s;
+}
+
+.prev:hover,
+.next:hover {
+    transform: translateX(5px);
 }
 
 .prev {
-    position: relative;    
-    top: -250px; 
-    left: -600px; 
+    left: 8%;
+    transform: translateX(-0%);
+    background-color: var(--black-color);
+    color: var(--body-color);
 }
 
 .next {
-    position: relative;    
-    top: -290px; 
-    left: 600px; 
+    right: 85%;
+    transform: translateX(20%);
+    background-color: rgb(255, 255, 255);
+}
+
+.popup {
+    position: absolute;
+    top: -150%;
+    left:50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: var(--black-color);
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius:10px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+
+.popup.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: white;
+    color: var(--black-color);
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup .form h2 {
+    text-align: center;
+    color: white;
+    margin: 15px 0px 20px;
+    font-size: var(--h2-font-size);
+}
+
+.popup .form .form-element {
+    margin: 30px 0px; 
+}
+
+.popup .form .form-element label {
+    font-size: var(--normal-font-size) ;
+    color: white;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.popup .form .form-element input[type="checkbox"] {
+    margin-right:5px ;
+}
+
+.popup .form .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: white;
+    font-family: var(--font-regular);
+    color: var(--black-color);
+    cursor: pointer;
+}
+
+.popup .form .form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contacts-popup {
+    background-color: var(--black-color);
+}
+
+.contacts-popup .close-btn {
+    color: var(--black-color);
+}
+
+.contacts-popup .form h2 {
+    color: white;
+}
+
+.contacts-popup .form-element label {
+    color: white;
+}
+
+.contacts-popup .form-element input[type="text"],
+.contacts-popup .form-element input[type="password"],
+.contacts-popup .form-element textarea {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.contacts-popup .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: white;
+    font-family: var(--font-regular);
+    color: var(--black-color);
+    cursor: pointer;
+}
+
+.contacts-popup .form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }

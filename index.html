@@ -3,51 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="#">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../src/css/style.css">
-    <title>Bike City</title>
-</head>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Velocity Ventures</title>
+</head> 
 <body>
-
     <header>
-        <nav>
-            <div>
-                <a href="#" class="header-item">logo</a>
+        <div class="container">
+            <div class="flex">
+                <a href="#" id="header-brand">Velocity Ventures</a>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/src/pages/about.html">About us</a></li>
+                        <li><a href="/src/pages/quiz.html">Quiz</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-icon">
+                    <a href="#" id="show-contacts"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#" id="show-login"><i class="fa-solid fa-user"></i></a>
+                </div>
             </div>
-            <div>
-                <a href="#" class="header-item">Bikes</a>
-                <a href="#" class="header-item" >Wear</a>
-                <a href="#" class="header-item">Equipament</a>
-            </div>
-            <div>
-                <a id=''href="#" class="header-item"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="#" class="header-item"><i class="fa-solid fa-right-to-bracket"></i></a>
-                <a href="#" class="header-item"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-            <div id="slideshow">
-                <h1 id="product-title">BIKERS</h1>
-                <img id="product-image" alt="#">
+        <div class="slider">
+            <div class="text--slides">
+                <h3 class="home__subtitle">NEW IN</h3>
+                <h1>Full Carbon <br> XT 12 Blue</h1>
+                <h1>Full Carbon <br> XT 12 Orange</h1>
+                <h1>TWS E-quest <br> Vs White</h1>
+                <h1>Naville Kroos<br> Red</h1>
+                <a href="#" class="home__button">
+                    Buy Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
-            
-            <button class="prev" onclick="prevSlide()">&#10094</button>
-            <button class="next" onclick="nextSlide()">&#10095</button>
-        </div>
-        
-
-    
-        <div>
-            <button id='buy' onclick="nextProduct()">Buy Product</button>
+            <div class="img--slides">
+                <img class="slide" src="/src/assets/img/bike-blue.png" alt="">
+                <img class="slide" src="/src/assets/img/bike-orange.png" alt="">
+                <img class="slide" src="/src/assets/img/bike-white.png" alt="">
+                <img class="slide" src="/src/assets/img/bike-red.png" alt="">
+            </div>
+            <button class="prev" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </main>
+    
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">remember-me</label>
+            </div>
+            <div class="form-element">
+                <button>Sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        
-    </footer>
-
-    <script src="./src/js/script.js"></script>
+    <div class="popup contacts-popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Contact Us</h2>
+            <div class="form-element">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-element">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+            </div>
+            <div class="form-element">
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./src/script/slideShow.js"></script>
+    <script src="./src/script/popup.js"></script>
 </body>
 </html>
